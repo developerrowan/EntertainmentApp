@@ -1,0 +1,24 @@
+<div *ngIf="show">
+    <div class="container-fluid"
+    style="background-image: url({{show.backdrop_path}}); height: 100vh; background-repeat: no-repeat;
+    background-size: cover;">
+        <div class="row" style="backdrop-filter: blur(8px); height: 100vh; padding-top: 10px; background-color: rgba(0, 0, 0, 0.4)">
+            <div class="col-md-4">
+                <img class="img-fluid" src="{{show.poster_path}}" style="border: 3px solid black;">
+            </div>
+            <div class="col-md-8">
+                <h1><b>{{show.name}}</b></h1>
+                <p *ngIf="show.firstAirDate"><b><i class="bi-calendar"></i> First Airing:</b> {{airDate | date: 'fullDate' }}</p>
+                <p *ngIf="show.original_language"><b><i class="bi-globe"></i> Original Language:</b> {{show.original_language}}</p>
+
+                <span>
+                    <i *ngFor="let star of stars" class="{{star.class}}"></i>
+                    ({{show.vote_count.toLocaleString()}} votes)
+                </span>
+
+                <p *ngIf="show.overview">{{show.overview}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="!show">Loading...</div>

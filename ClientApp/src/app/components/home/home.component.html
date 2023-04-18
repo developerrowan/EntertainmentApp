@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <div class="col-md-12 text-center pt-3">
+    <h1>Most Popular TV</h1>
+    <p>Shows that everyone can't stop talking about.</p>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col" *ngFor="let show of popularTV | async">
+      <tv-card [show]="show"></tv-card>
+    </div>
+  </div>
+  <hr />
+  <div class="col-md-12 text-center  pt-3">
+    <h1>Most Popular Movies</h1>
+    <p>Movies that everyone can't stop talking about.</p>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col" *ngFor="let movie of popularMovies | async">
+      <movie-card [movie]="movie"></movie-card>
+    </div>
+  </div>
+  <hr />
+  <div class="col-md-12 text-center  pt-3">
+    <h1>Top-Rated TV</h1>
+    <p>The best in television - rated by TV lovers like you.</p>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col" *ngFor="let show of topRatedTV | async">
+      <tv-card [show]="show"></tv-card>
+    </div>
+  </div>
+  <hr />
+  <div class="col-md-12 text-center  pt-3">
+    <h1>Top-Rated Movies</h1>
+    <p>The best in film - rated by movie lovers like you.</p>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col" *ngFor="let movie of topRatedMovies | async">
+      <movie-card [movie]="movie"></movie-card>
+    </div>
+  </div>
+</div>

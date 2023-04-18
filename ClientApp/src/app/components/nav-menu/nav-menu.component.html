@@ -1,0 +1,30 @@
+<header>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="['/']">
+        <svg width="33" height="27" xmlns="http://www.w3.org/2000/svg">
+          <path d="m26.463.408 3.2 6.4h-4.8l-3.2-6.4h-3.2l3.2 6.4h-4.8l-3.2-6.4h-3.2l3.2 6.4h-4.8l-3.2-6.4h-1.6a3.186
+                  3.186 0 0 0-3.184 3.2l-.016 19.2a3.2 3.2 0 0 0 3.2 3.2h25.6a3.2 3.2 0 0 0 3.2-3.2V.408h-6.4Z"
+            fill="#FC4747" />
+        </svg>
+        <span class="text-secondary">FlixDB</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/movies']">Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/shows']">TV Shows</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

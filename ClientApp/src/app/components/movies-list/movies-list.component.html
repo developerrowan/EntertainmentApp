@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="d-flex justify-content-center">
+        <pagination-controls class="pt-3" (pageChange)="onPageChange($event)"></pagination-controls>
+        <select (change)="filter($any($event.target).value)">
+            <option value="atoz">Alphabetical (A to Z)</option>
+            <option value="ztoa">Alphabetical (Z to A)</option>
+            <option selected value="popularity">Popularity</option>
+            <option value="rating">Rating</option>
+        </select>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 g-4 pt-3 pb-3">
+        <div class="col" *ngFor="let movie of movies | paginate: { itemsPerPage: 10, currentPage: page}">
+            <movie-card [movie]="movie"></movie-card>
+        </div>
+    </div>
+    
+    <div class="d-flex justify-content-center">
+        <pagination-controls (pageChange)="onPageChange($event)"></pagination-controls>
+    </div>
+</div>

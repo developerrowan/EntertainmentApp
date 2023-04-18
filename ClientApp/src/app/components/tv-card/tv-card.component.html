@@ -1,0 +1,12 @@
+<div class="card text-white bg-dark" *ngIf="show">
+    <img *ngIf="show.backdrop_path" src="{{show.backdrop_path}}" class="card-img-top" alt="{{show.name}} poster">
+    <div class="card-body">
+      <h5 class="card-title">{{show.name}}</h5>
+      <span *ngIf="show.original_language" 
+      class="badge bg-primary mx-2">Language: {{show.original_language}}</span>
+      <span *ngIf="show.origin_country" 
+      class="badge bg-primary">Country: {{show.origin_country}}</span>
+      <p class="card-text">{{show.overview}}</p>
+      <a href="/shows/{{show.id}}" class="btn btn-primary">See More</a>
+    </div>
+</div>

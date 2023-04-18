@@ -1,0 +1,10 @@
+<div class="card text-white bg-dark" *ngIf="movie">
+    <img *ngIf="movie.backdrop_path" src="{{movie.backdrop_path}}" class="card-img-top" alt="{{movie.title}} poster">
+    <div class="card-body">
+      <h5 class="card-title">{{movie.title}}</h5>
+      <span *ngIf="movie.original_language" 
+      class="badge bg-primary">Language: {{movie.original_language}}</span>
+      <p class="card-text">{{movie.overview}}</p>
+      <a href="/movies/{{movie.id}}" class="btn btn-primary">See More</a>
+    </div>
+</div>
